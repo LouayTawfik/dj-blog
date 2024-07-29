@@ -21,9 +21,6 @@ from blog.views import post_create, post_delete, post_detail, post_list, post_up
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('post/list', post_list),
-    path('post/detail/<int:post_id>', post_detail),
-    path('post/new', post_create),
-    path('post/update/<int:post_id>', post_update),
-    path('post/delete/<int:post_id>', post_delete)
+    path('', include("blog.urls")),
+
 ]
